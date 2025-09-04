@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Tube</title>
+  <link rel="icon" type="image/x-icon" href="img/Youtube_icon-icons.com_66802 (1).ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
+    .thumb {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .thumb:hover {
+      transform: scale(1.03);
+    }
+    p {
+      margin: 0;
+      font-size: 13px;
+      color: #606060;
+    }
+    .menu {
+      list-style-type: none;
+      padding: 20px;
+    }
+    .menu li {
+      margin-bottom: 20px;
+      font-size: 15px;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .menu li:hover {
+      background: #f1f1f1;
+      color: #cc0000;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 200px;
+      background: #fff;
+      padding-top: 20px;
+      border-right: 1px solid #ddd;
+      overflow-y: auto;
+    }
+    .topbar {
+      background-color: white;
+      position: fixed;
+      left: 200px;
+      right: 0;
+      top: 0;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 10;
+    }
+    .topbar input {
+      width: 50%;
+      height: 36px;
+      border-radius: 20px;
+      margin-left: 100px;
+      padding: 0 15px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .topbar button {
+      margin-left: 10px;
+      background: #f1f1f1;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .topbar button:hover {
+      background: #e0e0e0;
+    }
+    .grid-videos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 100px 20px 20px 220px;
+      gap: 20px;
+    }
+    .title {
+      display: grid;
+      grid-template-columns: 40px 1fr 10px;
+      column-gap: 10px;
+      margin-top: 10px;
+    }
+    .title img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+    .title div {
+      font-size: 14px;
+      font-weight: 500;
+      color: #111;
+    }
+    .title i {
+      cursor: pointer;
+      color: #606060;
+    }
+    /* Scrollbar aesthetic */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div>
+  <a href="index.html" class="title">
+    <i class="fa fa-youtube-play" style="font-size:28px; color:red; margin-right:8px;margin-left: 20px;"></i>
+    <div>
+      MY U
+      <p>Tube</p>
+    </div>
+  </a>
+</div>
+
+    <ul class="menu">
+      
+      <li><i class="fa fa-home" style="margin-right: 10px;"></i>Home</li>
+      <li><i class="fa fa-youtube-play" style="margin-right: 10px;"></i>Shorts</li>
+      <li><i class="fa fa-diamond" style="margin-right: 10px;"></i>Subscription</li>
+    </ul>
+    <hr>
+    <ul class="menu">
+      <li><i class="fa fa-user" style="margin-right: 10px;"></i>You</li>
+      <li><i class="fa fa-history" style="margin-right: 10px;"></i>History</li>
+      <li><i class="fa fa-music" style="margin-right: 10px;"></i>Playlist</li>
+      <li><i class="fa fa-clock-o" style="margin-right: 10px;"></i>Watch Later</li>
+      <li><i class="fa fa-thumbs-up" style="margin-right: 10px;"></i>Liked Videos</li>
+      <li><i class="fa fa-download" style="margin-right: 10px;"></i>Download</li>
+    </ul>
+  </div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <input type="text" placeholder="Search">
+    <button type="button" style="height: 40px;width: 40px;border-radius: 50%;border:0;">
+      <i class="fa fa-microphone" aria-hidden="true" style="font-size: 18px;"></i>
+    </button>
+    <button type="button" style="height: 32px;width: 100px;border-radius: 20px;border: 0;">
+      <i class="fa fa-plus" aria-hidden="true" style="font-size: 16px;"></i> Create
+    </button>
+    <i class="fa fa-bell" style="margin-left: 20px;font-size: 20px;cursor:pointer;"></i>
+  </div>
+
+  <!-- Video Grid -->
+  <div class="grid-videos">
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/zu13BGvYRCA" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Becomes a Lawyer for ONE DAY! Ft.RVCJMedia
+          <p>Netflix India</p>
+          <p>2.6M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/Touhl7wTWR0?si=2WKpRqgh6meqBcxW" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Mr. Majnu (HD) South Romantic Comedy
+          <p>Netflix India</p>
+          <p>2.1M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/Touhl7wTWR0?si=2WKpRqgh6meqBcxW" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Mr. Majnu (HD) South Romantic Comedy
+          <p>Netflix India</p>
+          <p>2.1M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/Touhl7wTWR0?si=2WKpRqgh6meqBcxW" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Mr. Majnu (HD) South Romantic Comedy
+          <p>Netflix India</p>
+          <p>2.1M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/Touhl7wTWR0?si=2WKpRqgh6meqBcxW" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Mr. Majnu (HD) South Romantic Comedy
+          <p>Netflix India</p>
+          <p>2.1M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/Touhl7wTWR0?si=2WKpRqgh6meqBcxW" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Mr. Majnu (HD) South Romantic Comedy
+          <p>Netflix India</p>
+          <p>2.1M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    
+    <div>
+      <iframe class="thumb" src="https://www.youtube.com/embed/Touhl7wTWR0?si=2WKpRqgh6meqBcxW" allowfullscreen></iframe>
+      <div class="title">
+        <img src="img/123.jpg" alt="">
+        <div>
+          Mr. Majnu (HD) South Romantic Comedy
+          <p>Netflix India</p>
+          <p>2.1M views</p>
+        </div>
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+
+    <!-- Add more video blocks like above -->
+  </div>
+
+</body>
+</html>
