@@ -15,4 +15,4 @@ A video streaming website design clone built using **HTML** and **CSS** for prac
 
 ## 📸 Screenshots
 
-![Homepage Screenshot](img/screenshot.png)
+![Homepage Screenshot](img/Screenshot.png)
